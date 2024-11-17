@@ -25,3 +25,34 @@
   -> inhandle function --------------- const password = e.target.password.value;
 
 -->
+
+<!-- 
+-------------------------------Note (50-3 -> set auth provider and auth context)------------------------------------ 
+ 
+1. create a folder named "providers" in 'src' and a file named "AuthProvider.jsx" in 'providers'
+2. create a context in this file just before the component 
+    const AuthContext = createContext(null);
+  ekhane variable name ta capital e dewa hoy
+3. Full context demo ----------------
+                      import React, { createContext } from 'react';
+
+                      const AuthContext = createContext(null);
+
+                      const AuthProvider = () => {
+
+                          const authInfo = {
+                              name: 'Nodi Sagor Khal Bil......'
+                          }
+
+                          return (
+                              <AuthContext.Provider value={authInfo}>
+                                  
+                              </AuthContext.Provider>
+                          );
+                      };
+
+                      export default AuthProvider;
+4. 'main.jsx' e RouterProvidr er jaygay 'AuthProvider' diye tar moddhe 'RouterProvider ta dibo'
+5. export auth Context
+6. access it from Navbar
+-->
